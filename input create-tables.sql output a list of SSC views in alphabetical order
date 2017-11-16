@@ -1,0 +1,11 @@
+>&2 echo "system requriements bash,grep,awk,sort"
+>&2 echo "tested on OSX only"
+>&2 echo "Interactive Command"
+>&2 echo "Takes a mysql schema and prints a alphabetica list to stdout usually the screen"
+>&2 echo "it has set MINUS x to enable bourne.again.shell debugging"
+>&2 echo "toxincnaan at gmail.com" 
+>&2 echo "this script BELIEVE it or not is supported and can take push commits in and around https://www.github.com/toxicnaan/SSCinspectiontools" 
+
+set -x
+cat create-tables.sql  | grep "CREATE VIEW" | awk '{ print $3 }' | sort
+set +x

@@ -1,0 +1,5 @@
+2&> echo "clean up stream with stream editor also known as sed using the substitute command"
+2&> echo "https://stackoverflow.com/questions/8008546/remove-unwanted-character-using-awk"
+
+
+sed 's/(//g' | sed 's/"//g'| sed 's/\`//g' 
